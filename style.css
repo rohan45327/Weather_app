@@ -1,0 +1,182 @@
+body {
+   margin: 0;
+   padding: 0;
+   overflow-x: hidden;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   background-color: #f0f0f0;
+}
+
+.bg {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.container {
+   position: fixed;
+   height: 100vh;
+   width: 100vw;
+   overflow: hidden;
+   z-index: -1;
+   top: 0;
+   left: 0;
+}
+
+.box {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+   border: none;
+   border-radius: 15px;
+   backdrop-filter: blur(10px);
+   background-color: rgba(255, 255, 255, 0.2);
+   height: 70vh;
+   width: 60vw;
+   text-align: center;
+   transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.box:hover {
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+   transform: scale(1.02);
+}
+
+@media (max-width: 600px) {
+   .box {
+       height: 60vh;
+       width: 80vw;
+   }
+}
+
+.box1 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   width: 100vw;
+}
+
+#main {
+   font-size: xx-large;
+   font-weight: bold;
+   color: #011625;
+   margin-bottom: 20px;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   transition: color 0.3s ease-in-out;
+}
+
+#check {
+   border: none;
+   border-radius: 8px;
+   background-color: rgba(26, 26, 248, 0.9);
+   color: white;
+   padding: 10px 20px;
+   font-size: medium;
+   cursor: pointer;
+   transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#check:hover {
+   background-color: rgba(26, 26, 248, 1);
+   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+}
+
+#check:active {
+   background-color: rgba(15, 15, 180, 1);
+   transform: translateY(1px);
+}
+
+#city {
+   max-width: 90%;
+   padding: 12px 18px;
+   font-size: 1em;
+   border-radius: 12px;
+   border: 1px solid #ccc;
+   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#city:focus {
+   outline: none;
+   border-color: #007bff;
+   box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+#ico {
+   background-color: rgb(40, 0, 75);
+   padding: 12px 20px;
+   color: white;
+   font-size: large;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   margin: 0;
+   text-align: right;
+   word-spacing: 25px;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#ico a {
+   color: white;
+   text-decoration: none;
+   position: relative;
+   transition: color 0.3s ease-in-out;
+}
+
+#ico a::after {
+   content: '';
+   position: absolute;
+   bottom: -2px;
+   left: 0;
+   width: 0%;
+   height: 2px;
+   background-color: white;
+   transition: width 0.3s ease-in-out;
+}
+
+#ico a:hover {
+   color: #ddd;
+}
+
+#ico a:hover::after {
+   width: 100%;
+}
+
+#card {
+   border: none;
+   height: 18vh;
+   width: 18vw;
+   border-radius: 15%;
+   backdrop-filter: blur(12px);
+   background-color: rgba(95, 94, 94, 0.005);
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: xx-large;
+   color: #201f1f;
+   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#card:hover {
+   transform: scale(1.05);
+   box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+#weather-icon {
+   width: 80px;
+   height: auto;
+   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+}
+
+.animate-icon {
+   animation: spin 1s linear infinite;
+}
+@keyframes spin {
+   from { transform: rotate(0deg); }
+   to { transform: rotate(360deg); }
+}

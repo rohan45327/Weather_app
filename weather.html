@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img class="bg" src="orange.png" alt="weather.png">
+    </div>
+    <header id="menu" class="bg-gray-900 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div id="ico">
+                <a href="#main">Weather</a>
+                <a href="#box">Settings</a>
+                <a href="#jun">Contact</a>
+            </div>
+        </nav>
+    </header>
+    <div class="box1">
+        <div class="box">
+            
+             <div id="weather-icon-container"><img id="weather-icon" src="download.png" alt="Weather Icon"></div>
+            <div id="card">
+                Temperature
+            </div>
+            <input id="city" placeholder="Enter the City To see Weather results">
+            <button id="check">Check</button>
+            <div id="main">Weather</div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
