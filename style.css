@@ -33,7 +33,6 @@ body {
    border: none;
    border-radius: 15px;
    backdrop-filter: blur(10px);
-   background-color: rgba(255, 255, 255, 0.2);
    height: 70vh;
    width: 60vw;
    text-align: center;
@@ -45,7 +44,7 @@ body {
    transform: scale(1.02);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px){
    .box {
        height: 60vh;
        width: 80vw;
@@ -63,9 +62,9 @@ body {
 #main {
    font-size: xx-large;
    font-weight: bold;
-   color: #011625;
+   color: #010406;
    margin-bottom: 20px;
-   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    transition: color 0.3s ease-in-out;
 }
@@ -84,11 +83,13 @@ body {
 #check:hover {
    background-color: rgba(26, 26, 248, 1);
    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+   scale: 1.1;
+   transition: scale 3ms ease-in-out;
 }
 
 #check:active {
-   background-color: rgba(15, 15, 180, 1);
-   transform: translateY(1px);
+   background-color: rgb(8, 8, 131);
+   transform: translateY(2px);
 }
 
 #city {
@@ -99,7 +100,11 @@ body {
    border: 1px solid #ccc;
    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
-
+#city:active{
+   scale: 1.1;
+   background-color: #0e0d0d3d;
+   transition: scale 0.2s ease-in-out,background-color 0.2s ease-in-out;
+}
 #city:focus {
    outline: none;
    border-color: #007bff;
@@ -148,16 +153,14 @@ body {
    border: none;
    height: 18vh;
    width: 18vw;
-   border-radius: 15%;
+   border-radius:35%;
    backdrop-filter: blur(12px);
-   background-color: rgba(95, 94, 94, 0.005);
    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   font-size: xx-large;
-   color: #201f1f;
+   font-size: 1.8rem;
    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
