@@ -5,7 +5,7 @@ const temp=document.getElementById('card')
 const weatherIcon = document.getElementById('weather-icon');
 const api='4d27d404fbf77aee75a28d12430fbab9'
 const country='IN'
-const base_url = 'http://api.openweathermap.org/data/2.5/weather?'
+const base_url = 'https://api.openweathermap.org/data/2.5/weather?'
 check.addEventListener('click',()=>{
 const x=cityname.value.trim()
 if(!x){
@@ -41,4 +41,5 @@ fetch(url)
 .catch(error => {
     console.error('Failed to fetch weather data:', error);
   });
+
 })
