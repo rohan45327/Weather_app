@@ -3,7 +3,7 @@ const cityname=document.getElementById('city')
 const check=document.getElementById('check')
 const temp=document.getElementById('card')
 const weatherIcon = document.getElementById('weather-icon');
-const api='4d27d404fbf77aee75a28d12430fbab9'
+const api='a7a13a7720231cd82fda6993eba18290'
 const country='IN'
 const base_url = 'https://api.openweathermap.org/data/2.5/weather?'
 check.addEventListener('click',()=>{
@@ -13,7 +13,6 @@ if(!x){
     return;
 }
 const url= `${base_url}q=${x},${country}&appid=${api}&units=metric`
-text.innerText = `Fetching weather for ${x}...`;
 fetch(url)
 .then(response=>{
     if(!response.ok){
@@ -26,7 +25,7 @@ fetch(url)
     return response.json()
 })
 .then(data=>{
-    if(data['cod']!='404'){
+    if(data['cod']=='200'){
         main = data["main"]
         climate = data["weather"][0]
         temperature = main["temp"]
