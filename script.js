@@ -10,6 +10,12 @@ const country='IN'
 const base_url = 'https://api.openweathermap.org/data/2.5/weather?'
 async function setbg(background) {
     try{
+        const cl=['https://media.gettyimages.com/id/1402543949/ja/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%88/summer-clouds-over-the-beach-in-kanagawa-of-japan.jpg?s=612x612&w=0&k=20&c=6fQUFMhDimgXRPUZ2OVIyoWjemrDJeT3Z66WKLk4ulg=',
+                  'https://media.gettyimages.com/id/868958502/photo/the-london-o2-arena-and-river-thames-london.jpg?s=612x612&w=0&k=20&c=-vZbgxRYRrvIqGmMd6soTwNoxlDeOVL16L8ZXDcWv7o=',
+                  'https://media.gettyimages.com/id/2229578616/photo/mackerel-sky-or-cirrocumulus-clouds-on-a-summer-day.jpg?s=612x612&w=0&k=20&c=-M5ocibOJ50r54EnY2ZezKblajUxvfncNBHUzvaBjyo=',
+                  'https://www.thoughtco.com/thmb/J3Rgj51HG6lQKDL8k-PJgtdf2bI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-528903279-599d1549aad52b001107054d.jpg',
+                  'https://media.gettyimages.com/id/611249416/photo/thunderstorm-supercell-over-a-loan-house-texas-usa.jpg?s=612x612&w=0&k=20&c=_xq4voXmf0KRkvCnIAaX5ZoRNErXd7u0P3WmTX0Sv7c='
+                ]
         const backs={
         'Clear':'https://i.pinimg.com/736x/fb/6a/8d/fb6a8de590bd6ebf1009e87018e866cb.jpg',
         'Rain':'https://media.licdn.com/dms/image/v2/C5612AQGfrCHgvYAtfg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1594661100786?e=2147483647&v=beta&t=1M4A7bsjOmTPGsV3MYC_qXH2KTktUhavELXuahqSwEs',
@@ -18,12 +24,21 @@ async function setbg(background) {
         'Overcast':'https://media.gettyimages.com/id/682789858/video/rain-strom-in-sun-set.jpg?s=640x640&k=20&c=rlBwVrArS-ijdkhzQR_dzl4yKNBglAZX17GQiYBI3tk=',
         'Mist':'https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/FD4A/production/_87524846_87524845.jpg',
         'Clouds':'https://media.gettyimages.com/id/868958502/photo/the-london-o2-arena-and-river-thames-london.jpg?s=612x612&w=0&k=20&c=-vZbgxRYRrvIqGmMd6soTwNoxlDeOVL16L8ZXDcWv7o=',
-        
+        'Fog':'http://media.gettyimages.com/id/599340223/photo/road-with-a-car-lined-by-trees-vanishing-in-fog.jpg?s=612x612&w=0&k=20&c=PHKarJKoUtbikhf5J027-UYefOMw6W9rwEy3EW1FiJw=',
+        'Thunderstorm':'https://media.gettyimages.com/id/1401617190/photo/cloud-storm-sky-with-thunderbolt-over-the-village-in-rural-scene.jpg?s=612x612&w=0&k=20&c=OgX0Qsf5KNYDTDCknYCArVLsPPRypa4hJ8hVqyY7Pts=',
+        'Haze':'https://cff2.earth.com/uploads/2018/11/13015448/what-is-haze.jpg'
+    }
+        if(background=='Clouds'){
+            const ind=Math.floor(Math.random()*cl.length)
+            bg.src=cl[ind]
         }
-        if(background in backs){
-            const bkurl=backs[background]
-            bg.src=bkurl
+        else{
+            if(background in backs){
+                const bkurl=backs[background]
+                bg.src=bkurl
+            }
         }
+       
     }
     catch(error){
         console.error(error)
