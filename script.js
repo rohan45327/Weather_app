@@ -57,7 +57,7 @@ fetch(url)
     if(!response.ok){
         throw new Error(`Error ${response.status}`)
     }
-    if(response=='Error 404'){
+    if(response.status==404){
         text=innerText="Please Check the city name provided"
         throw new Error(`Error 404! not found ${x} city name in Dictionary`)
     }
