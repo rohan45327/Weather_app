@@ -1,3 +1,4 @@
+
 const text=document.getElementById('main')
 const cityname=document.getElementById('city')
 const check=document.getElementById('check')
@@ -54,11 +55,8 @@ const url= `${base_url}q=${x},${country}&appid=${api}&units=metric`
 fetch(url)
 .then(response=>{
     if(response.status==404){
-        text=innerText="Please Check the city name provided"
+        text.innerHTML="Please Check the city name provided"
         throw new Error(`Error 404! not found ${x} city name in Dictionary`)
-    }
-    if(!response.ok){
-        throw new Error(`Error while fetching ${response.status}`)
     }
     return response.json()
 })
