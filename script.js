@@ -51,7 +51,7 @@ if(!x){
     alert("PLEASE ENTER VALID CITY NAME")
     return;
 }
-const url= `${base_url}q=${x},${country}&appid=${api}&units=metric`
+const url= `${base_url}q=${x}&appid=${api}&units=metric`
 fetch(url)
 .then(response=>{
     if(response.status==404){
@@ -83,3 +83,4 @@ fetch(url)
     console.error('Failed to fetch weather data:', error);
   });
 })
+
